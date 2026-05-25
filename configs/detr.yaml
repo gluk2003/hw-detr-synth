@@ -1,0 +1,63 @@
+# Конфиг fine-tuning Deformable-DETR на COCO-10
+
+experiment_name: "detr_coco10"
+seed: 42
+
+data:
+  root: "data/coco10"
+  train_ann: "data/coco10/train/annotations.json"
+  train_img_dir: "data/coco10/train/images"
+  val_ann: "data/coco10/val/annotations.json"
+  val_img_dir: "data/coco10/val/images"
+  num_classes: 10
+  class_names:
+    - person
+    - bicycle
+    - car
+    - motorcycle
+    - bus
+    - truck
+    - traffic_light
+    - stop_sign
+    - dog
+    - cat
+
+model:
+  name: "SenseTime/deformable-detr"
+  num_queries: 100        # default DETR, у наших картинок объектов мало
+  freeze_backbone_epochs: 2  # сначала тренируем только head
+
+train:
+  batch_size: 2
+  num_workers: 6
+  epochs: 30
+  lr_backbone: 5.0e-6
+  lr_head: 5.0e-5
+  weight_decay: 1.0e-4
+  grad_clip: 0.5
+  warmup_steps: 500
+  lr_drop_epoch: 20       # шаг lr-scheduler (StepLR с gamma=0.1)
+  mixed_precision: "none"
+
+eval:
+  eval_every: 2           # эпох
+  iou_thresholds: [0.5, 0.75]
+  log_images: 16          # сколько картинок с боксами кидать в TB
+
+ckpt:
+  save_every: 5           # эпох
+  save_best_on: "map_50"
+  dir: "runs/detr_coco10/ckpt"
+
+profiler:
+  enable: true
+  epochs: [1, 5]          # на каких эпохах писать trace
+  wait: 1
+  warmup: 1
+  active: 3
+  repeat: 1
+  out_dir: "runs/detr_coco10/profiler"
+
+logging:
+  tb_dir: "runs/detr_coco10/tb"
+  log_every_n_steps: 20

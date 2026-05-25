@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Data / artifacts
+data/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+
+# But keep small example assets
+!assets/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

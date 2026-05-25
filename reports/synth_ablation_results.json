@@ -1,0 +1,46 @@
+[
+  {
+    "name": "baseline_real_only",
+    "best_acc": 0.983177570093458,
+    "per_class": {
+      "background": 0.9958133971291866,
+      "stop_sign": 0.8974358974358975,
+      "traffic_light": 0.4888888888888889,
+      "motorcycle": 0.832
+    },
+    "synth_ratio": 0.0
+  },
+  {
+    "name": "synth_25pct",
+    "best_acc": 0.9833644859813084,
+    "per_class": {
+      "background": 0.995414673046252,
+      "stop_sign": 0.8974358974358975,
+      "traffic_light": 0.4222222222222222,
+      "motorcycle": 0.856
+    },
+    "synth_ratio": 0.25
+  },
+  {
+    "name": "synth_50pct",
+    "best_acc": 0.9839252336448598,
+    "per_class": {
+      "background": 0.9964114832535885,
+      "stop_sign": 0.8717948717948718,
+      "traffic_light": 0.4666666666666667,
+      "motorcycle": 0.844
+    },
+    "synth_ratio": 0.5
+  },
+  {
+    "name": "synth_100pct",
+    "best_acc": 0.9841121495327103,
+    "per_class": {
+      "background": 0.9966108452950558,
+      "stop_sign": 0.8974358974358975,
+      "traffic_light": 0.4222222222222222,
+      "motorcycle": 0.848
+    },
+    "synth_ratio": 1.0
+  }
+]

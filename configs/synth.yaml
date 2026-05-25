@@ -1,0 +1,47 @@
+# Конфиг HW2.5 — генерация SD+ControlNet и обучение классификатора
+
+experiment_name: "synth_ablation"
+seed: 42
+
+# Какие классы считаем редкими (по умолчанию по статистике COCO-10)
+rare_classes:
+  - stop_sign
+  - traffic_light
+  - motorcycle
+
+generation:
+  sd_model: "runwayml/stable-diffusion-v1-5"
+  controlnet: "lllyasviel/sd-controlnet-canny"
+  num_per_class: 500
+  steps: 30
+  guidance_scale: 7.5
+  controlnet_conditioning_scale: 0.85
+  image_size: 512
+  out_dir: "data/synth"
+  device: "cuda"
+  dtype: "fp16"
+
+classifier:
+  model: "vit_tiny_patch16_224"     # timm
+  num_classes: 4                    # 3 редких + "background"
+  pretrained: true
+  batch_size: 64
+  num_workers: 4
+  epochs: 25
+  lr: 3.0e-4
+  weight_decay: 5.0e-2
+  mixed_precision: "fp16"
+
+experiments:
+  - name: baseline_real_only
+    synth_ratio: 0.0
+  - name: synth_25pct
+    synth_ratio: 0.25
+  - name: synth_50pct
+    synth_ratio: 0.50
+  - name: synth_100pct
+    synth_ratio: 1.00
+
+logging:
+  tb_dir: "runs/synth_ablation/tb"
+  log_every_n_steps: 20

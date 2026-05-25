@@ -1,0 +1,26 @@
+{
+  "totals": {
+    "tp": 0,
+    "cls": 0,
+    "loc": 26,
+    "both": 3,
+    "dupe": 0,
+    "bkg": 93
+  },
+  "per_class_cls": {},
+  "per_class_loc": {
+    "person": 26
+  },
+  "per_class_miss": {
+    "person": 11004,
+    "stop_sign": 75,
+    "truck": 415,
+    "car": 1932,
+    "bus": 285,
+    "cat": 202,
+    "traffic_light": 637,
+    "bicycle": 316,
+    "dog": 218,
+    "motorcycle": 371
+  }
+}
