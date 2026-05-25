@@ -6,7 +6,13 @@ __pycache__/
 
 # Data / artifacts — checkpoints исключены, TB events и профайлер в репо
 data/
+data/coco/
+data/coco10/
+data/crops/
+data/synth/
 runs/**/ckpt/
+runs/**/best.pt
+runs/**/epoch_*.pt
 runs/runs/
 runs/synth_ablation/
 checkpoints/
@@ -22,6 +28,7 @@ checkpoints/
 
 # OS
 .DS_Store
+**/.DS_Store
 Thumbs.db
 
 # IDE

@@ -84,9 +84,6 @@ hw-detr-synth/
 │   ├── generate_synth.sh
 │   ├── run_classifier_ablation.sh
 │   └── run_all.sh
-├── notebooks/
-│   ├── 01_hw2_detr_exploration.ipynb
-│   └── 02_hw25_synth_ablation.ipynb
 ├── tests/
 │   └── test_error_logic.py     # unit-тесты логики ошибок (numpy-only)
 ├── reports/
