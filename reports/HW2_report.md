@@ -81,14 +81,22 @@ traffic_light, stop_sign, dog, cat`. Эта подборка покрывает:
 * `loss_giou` падает медленнее `loss_ce` — типично для DETR;
 * mAP@50 растёт монотонно, на эпохе ~20 (lr drop) ускорение и плато.
 
-### Profiler trace
+![Loss curves](loss_curves.png)
 
-`runs/detr_coco10/profiler/epoch_1/`, `epoch_5/`.
+![mAP curves](map_curves.png)
 
-Открывать так:
+### Профайлер
+
+Trace-файлы (Chrome JSON) сохранены в репо:
+
+```
+runs/detr_coco10/profiler/epoch_1/
+runs/detr_coco10/profiler/epoch_5/
+```
 
 ```bash
-tensorboard --logdir runs/detr_coco10/  # вкладка PYTORCH PROFILER
+tensorboard --logdir runs/detr_coco10/tb/
+# вкладка PYTORCH_PROFILER → выбрать step из эпох 1 и 5
 ```
 
 Что ищем: соотношение времени **DataLoader vs forward vs backward**,

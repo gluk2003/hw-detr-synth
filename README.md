@@ -112,6 +112,29 @@ pip install -r requirements.txt
 
 ---
 
+## Воспроизведение
+
+### Полный запуск (требует GPU)
+
+```bash
+pip install -r requirements.txt
+bash scripts/prepare_coco_subset.sh data/coco
+bash scripts/run_detr.sh                  # обучение DETR (требует GPU)
+bash scripts/run_error_analysis.sh        # error analysis
+bash scripts/generate_synth.sh            # генерация синтетики
+bash scripts/run_classifier_ablation.sh   # ablation классификатора
+```
+
+### Просмотр результатов без запуска
+
+```bash
+tensorboard --logdir runs/        # графики и trace профайлера
+open reports/HW2_report.md        # отчёт HW2
+open reports/HW2.5_report.md      # отчёт HW2.5
+```
+
+---
+
 ## HW2 — Deformable-DETR
 
 ### 1. Подготовка датасета

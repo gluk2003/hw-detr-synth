@@ -4,9 +4,11 @@ __pycache__/
 .venv/
 *.egg-info/
 
-# Data / artifacts
+# Data / artifacts — checkpoints исключены, TB events и профайлер в репо
 data/
-runs/
+runs/**/ckpt/
+runs/runs/
+runs/synth_ablation/
 checkpoints/
 *.pt
 *.pth

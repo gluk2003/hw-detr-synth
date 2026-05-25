@@ -1,0 +1,641 @@
+2026-05-24 14:31:41 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 4,
+    "num_workers": 4,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 14:31:41 [INFO] train_detr: Device: cuda
+2026-05-24 14:31:53 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 14:35:54 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 4,
+    "num_workers": 4,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 14:35:54 [INFO] train_detr: Device: cuda
+2026-05-24 14:35:55 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 14:38:58 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 4,
+    "num_workers": 4,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 14:38:58 [INFO] train_detr: Device: cuda
+2026-05-24 14:39:00 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 14:39:07 [INFO] train_detr: Train batches: 19161, val batches: 814
+2026-05-24 14:39:07 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 14:51:58 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 2,
+    "num_workers": 6,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 14:51:58 [INFO] train_detr: Device: cuda
+2026-05-24 14:52:00 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 14:52:00 [INFO] train_detr: Train batches: 1500, val batches: 1628
+2026-05-24 14:52:00 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 14:58:54 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 2,
+    "num_workers": 6,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 14:58:55 [INFO] train_detr: Device: cuda
+2026-05-24 14:58:56 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 14:58:56 [INFO] train_detr: Train batches: 1500, val batches: 1628
+2026-05-24 14:58:56 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 15:02:58 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 2,
+    "num_workers": 6,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 15:02:58 [INFO] train_detr: Device: cuda
+2026-05-24 15:02:59 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 15:03:00 [INFO] train_detr: Train batches: 1500, val batches: 1628
+2026-05-24 15:03:00 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 15:05:18 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 2,
+    "num_workers": 6,
+    "epochs": 30,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.1,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "fp16"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 15:05:18 [INFO] train_detr: Device: cuda
+2026-05-24 15:05:19 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 15:05:20 [INFO] train_detr: Train batches: 1500, val batches: 1628
+2026-05-24 15:05:20 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 15:17:12 [INFO] train_detr: Epoch 0 | loss 4.648 | loss_ce=1.348 loss_bbox=0.312 loss_giou=0.869 cardinality_error=95.048
+2026-05-24 15:17:12 [INFO] train_detr: Профайлер активен на эпохе 1
+2026-05-24 15:29:49 [INFO] train_detr: Epoch 1 | loss 3.148 | loss_ce=0.537 loss_bbox=0.233 loss_giou=0.724 cardinality_error=95.262
+2026-05-24 15:37:42 [INFO] train_detr: Epoch 1 | mAP 0.0002 | mAP@50 0.0017 | mAP@75 0.0000
+2026-05-24 15:37:42 [INFO] train_detr: NEW BEST mAP@50 = 0.0017; ckpt сохранён
+2026-05-24 15:37:42 [INFO] train_detr: Эпоха 2: backbone разморожен.
+2026-05-24 22:14:51 [INFO] train_detr: Config: {
+  "experiment_name": "detr_coco10",
+  "seed": 42,
+  "data": {
+    "root": "data/coco10",
+    "train_ann": "data/coco10/train/annotations.json",
+    "train_img_dir": "data/coco10/train/images",
+    "val_ann": "data/coco10/val/annotations.json",
+    "val_img_dir": "data/coco10/val/images",
+    "num_classes": 10,
+    "class_names": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "traffic_light",
+      "stop_sign",
+      "dog",
+      "cat"
+    ]
+  },
+  "model": {
+    "name": "SenseTime/deformable-detr",
+    "num_queries": 100,
+    "freeze_backbone_epochs": 2
+  },
+  "train": {
+    "batch_size": 2,
+    "num_workers": 6,
+    "epochs": 30,
+    "lr_backbone": 5e-06,
+    "lr_head": 5e-05,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.5,
+    "warmup_steps": 500,
+    "lr_drop_epoch": 20,
+    "mixed_precision": "none"
+  },
+  "eval": {
+    "eval_every": 2,
+    "iou_thresholds": [
+      0.5,
+      0.75
+    ],
+    "log_images": 16
+  },
+  "ckpt": {
+    "save_every": 5,
+    "save_best_on": "map_50",
+    "dir": "runs/detr_coco10/ckpt"
+  },
+  "profiler": {
+    "enable": true,
+    "epochs": [
+      1,
+      5
+    ],
+    "wait": 1,
+    "warmup": 1,
+    "active": 3,
+    "repeat": 1,
+    "out_dir": "runs/detr_coco10/profiler"
+  },
+  "logging": {
+    "tb_dir": "runs/detr_coco10/tb",
+    "log_every_n_steps": 20
+  }
+}
+2026-05-24 22:14:52 [INFO] train_detr: Device: cuda
+2026-05-24 22:14:54 [INFO] train_detr: Параметров: total=39,946,448  trainable=39,724,048
+2026-05-24 22:14:55 [INFO] train_detr: Train batches: 1500, val batches: 1628
+2026-05-24 22:14:56 [INFO] train_detr: Resumed from runs/detr_coco10/ckpt/best.pt (epoch 2)
+2026-05-24 22:14:56 [INFO] train_detr: Backbone заморожен на первые 2 эпох
+2026-05-24 22:14:56 [INFO] train_detr: Эпоха 2: backbone разморожен.
+2026-05-24 22:44:42 [INFO] train_detr: Epoch 2 | loss 3.270 | loss_ce=0.539 loss_bbox=0.250 loss_giou=0.741 cardinality_error=95.124
+2026-05-24 23:14:40 [INFO] train_detr: Epoch 3 | loss 3.011 | loss_ce=0.525 loss_bbox=0.219 loss_giou=0.695 cardinality_error=95.046
+2026-05-24 23:22:45 [INFO] train_detr: Epoch 3 | mAP 0.0000 | mAP@50 0.0002 | mAP@75 0.0000
+2026-05-24 23:52:48 [INFO] train_detr: Epoch 4 | loss 2.827 | loss_ce=0.519 loss_bbox=0.199 loss_giou=0.655 cardinality_error=94.738
+2026-05-24 23:52:49 [INFO] train_detr: Профайлер активен на эпохе 5
+2026-05-25 00:23:18 [INFO] train_detr: Epoch 5 | loss 2.818 | loss_ce=0.514 loss_bbox=0.199 loss_giou=0.655 cardinality_error=93.619
+2026-05-25 00:31:53 [INFO] train_detr: Epoch 5 | mAP 0.0003 | mAP@50 0.0011 | mAP@75 0.0001
+2026-05-25 01:02:11 [INFO] train_detr: Epoch 6 | loss 2.719 | loss_ce=0.504 loss_bbox=0.188 loss_giou=0.636 cardinality_error=94.193
+2026-05-25 01:32:30 [INFO] train_detr: Epoch 7 | loss 2.733 | loss_ce=0.509 loss_bbox=0.190 loss_giou=0.638 cardinality_error=94.224
+2026-05-25 01:41:06 [INFO] train_detr: Epoch 7 | mAP 0.0004 | mAP@50 0.0020 | mAP@75 0.0000
+2026-05-25 01:41:08 [INFO] train_detr: NEW BEST mAP@50 = 0.0020; ckpt сохранён
+2026-05-25 02:11:44 [INFO] train_detr: Epoch 8 | loss 2.653 | loss_ce=0.506 loss_bbox=0.180 loss_giou=0.623 cardinality_error=93.324
+2026-05-25 02:42:14 [INFO] train_detr: Epoch 9 | loss 2.652 | loss_ce=0.502 loss_bbox=0.182 loss_giou=0.620 cardinality_error=93.816
+2026-05-25 02:50:51 [INFO] train_detr: Epoch 9 | mAP 0.0001 | mAP@50 0.0005 | mAP@75 0.0000
+2026-05-25 03:21:18 [INFO] train_detr: Epoch 10 | loss 2.562 | loss_ce=0.501 loss_bbox=0.172 loss_giou=0.601 cardinality_error=93.731
+2026-05-25 03:51:37 [INFO] train_detr: Epoch 11 | loss 2.468 | loss_ce=0.495 loss_bbox=0.159 loss_giou=0.588 cardinality_error=93.892
+2026-05-25 03:59:29 [INFO] train_detr: Epoch 11 | mAP 0.0001 | mAP@50 0.0003 | mAP@75 0.0000
+2026-05-25 04:29:41 [INFO] train_detr: Epoch 12 | loss 2.395 | loss_ce=0.487 loss_bbox=0.154 loss_giou=0.568 cardinality_error=93.801
+2026-05-25 05:00:01 [INFO] train_detr: Epoch 13 | loss 2.367 | loss_ce=0.474 loss_bbox=0.151 loss_giou=0.569 cardinality_error=93.989
+2026-05-25 05:08:38 [INFO] train_detr: Epoch 13 | mAP 0.0004 | mAP@50 0.0017 | mAP@75 0.0000
+2026-05-25 05:38:44 [INFO] train_detr: Epoch 14 | loss 2.346 | loss_ce=0.483 loss_bbox=0.150 loss_giou=0.557 cardinality_error=93.545
+2026-05-25 06:09:02 [INFO] train_detr: Epoch 15 | loss 2.302 | loss_ce=0.476 loss_bbox=0.145 loss_giou=0.549 cardinality_error=93.437
+2026-05-25 06:17:37 [INFO] train_detr: Epoch 15 | mAP 0.0001 | mAP@50 0.0006 | mAP@75 0.0000
+2026-05-25 06:47:57 [INFO] train_detr: Epoch 16 | loss 2.293 | loss_ce=0.476 loss_bbox=0.144 loss_giou=0.549 cardinality_error=94.338
+2026-05-25 07:18:18 [INFO] train_detr: Epoch 17 | loss 2.266 | loss_ce=0.470 loss_bbox=0.143 loss_giou=0.541 cardinality_error=94.074
+2026-05-25 07:26:55 [INFO] train_detr: Epoch 17 | mAP 0.0002 | mAP@50 0.0008 | mAP@75 0.0000
+2026-05-25 07:57:16 [INFO] train_detr: Epoch 18 | loss 2.270 | loss_ce=0.477 loss_bbox=0.142 loss_giou=0.542 cardinality_error=93.558
+2026-05-25 08:27:49 [INFO] train_detr: Epoch 19 | loss 2.240 | loss_ce=0.474 loss_bbox=0.139 loss_giou=0.535 cardinality_error=93.279
+2026-05-25 08:36:26 [INFO] train_detr: Epoch 19 | mAP 0.0003 | mAP@50 0.0017 | mAP@75 0.0000
+2026-05-25 09:06:39 [INFO] train_detr: Epoch 20 | loss 2.098 | loss_ce=0.459 loss_bbox=0.126 loss_giou=0.503 cardinality_error=93.004
+2026-05-25 09:36:52 [INFO] train_detr: Epoch 21 | loss 2.009 | loss_ce=0.456 loss_bbox=0.118 loss_giou=0.481 cardinality_error=91.914
+2026-05-25 09:45:28 [INFO] train_detr: Epoch 21 | mAP 0.0003 | mAP@50 0.0016 | mAP@75 0.0001
+2026-05-25 10:15:52 [INFO] train_detr: Epoch 22 | loss 1.950 | loss_ce=0.453 loss_bbox=0.112 loss_giou=0.467 cardinality_error=90.785
+2026-05-25 10:46:21 [INFO] train_detr: Epoch 23 | loss 1.930 | loss_ce=0.450 loss_bbox=0.110 loss_giou=0.465 cardinality_error=92.114
+2026-05-25 10:54:59 [INFO] train_detr: Epoch 23 | mAP 0.0003 | mAP@50 0.0016 | mAP@75 0.0001
+2026-05-25 11:25:00 [INFO] train_detr: Epoch 24 | loss 1.882 | loss_ce=0.447 loss_bbox=0.107 loss_giou=0.451 cardinality_error=92.883
+2026-05-25 11:55:29 [INFO] train_detr: Epoch 25 | loss 1.884 | loss_ce=0.452 loss_bbox=0.105 loss_giou=0.453 cardinality_error=92.535
+2026-05-25 12:04:04 [INFO] train_detr: Epoch 25 | mAP 0.0002 | mAP@50 0.0009 | mAP@75 0.0000
+2026-05-25 12:34:28 [INFO] train_detr: Epoch 26 | loss 1.852 | loss_ce=0.445 loss_bbox=0.104 loss_giou=0.444 cardinality_error=93.029
+2026-05-25 13:04:42 [INFO] train_detr: Epoch 27 | loss 1.830 | loss_ce=0.444 loss_bbox=0.101 loss_giou=0.439 cardinality_error=92.923
+2026-05-25 13:13:18 [INFO] train_detr: Epoch 27 | mAP 0.0002 | mAP@50 0.0012 | mAP@75 0.0000
+2026-05-25 13:43:49 [INFO] train_detr: Epoch 28 | loss 1.801 | loss_ce=0.444 loss_bbox=0.098 loss_giou=0.433 cardinality_error=92.810
+2026-05-25 14:13:59 [INFO] train_detr: Epoch 29 | loss 1.794 | loss_ce=0.442 loss_bbox=0.097 loss_giou=0.432 cardinality_error=93.336
+2026-05-25 14:22:36 [INFO] train_detr: Epoch 29 | mAP 0.0003 | mAP@50 0.0016 | mAP@75 0.0000
+2026-05-25 14:22:36 [INFO] train_detr: Training done.
