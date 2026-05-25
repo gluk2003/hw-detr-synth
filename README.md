@@ -43,8 +43,7 @@ Error analysis (score_thr=0.3, 3256 val images): BKG 76% · LOC 21% · BOTH 3%.
 Вывод: доменный разрыв нивелирует прирост объёма данных.
 Подробнее: [reports/HW2.5_report.md](reports/HW2.5_report.md).
 
-Чекпойнт `best.pt` (478 MB): [Releases v1.0](https://github.com/USERNAME/hw-detr-synth/releases/tag/v1.0)
-*(USERNAME будет обновлён после создания репозитория)*
+Чекпойнт `best.pt` (478 MB): [Releases v1.0](https://github.com/gluk2003/hw-detr-synth/releases/tag/v1.0)
 
 ---
 
